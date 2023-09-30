@@ -1,13 +1,18 @@
-Hi There!!👋😎
->
+<!--Hi There!!👋😎-->
+
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Pramuditha+Nadun!;" />
+</h1>
+
+<div align="center">
 <img align='justify'  src="https://github-readme-stats.vercel.app/api?username=PramudithaN&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&icon_color=58a6ff&title_color=58a6ff">
 <!--<img align="center" width="47%" src="https://github-readme-stats.vercel.app/api?username=PramudithaN&show_icons=true&theme=github_dark_dimmed#gh-dark-mode-only)](https://github.com/PramudithaN/github-readme-stats#gh-dark-mode-only&icon_color=#ffffff" />-->
 <!--<img align="right" width="47%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PramudithaN&theme=dark&hide_progress=true" />-->
+</div>
 
+ <hr/>
 
-
-<body>
-  <div align="justify">
+<div align="justify">
 <img  src= "https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white" />
 <img  src= "https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=for-the-badge&logo=Adobe%20After%20Effects&logoColor=white" />
 <img  src= "https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom&logoColor=white" />
@@ -34,4 +39,4 @@ Hi There!!👋😎
 
 <img  src= "https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white" />
 </div>
-</body>
+
