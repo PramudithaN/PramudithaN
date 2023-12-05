@@ -1,7 +1,7 @@
 <!--Hi There!!👋😎-->
 <div> 
 <div align="center">
-<a href="https://app.daily.dev/pramudithan"><img src="devcard.svg" width="400" alt="Pramuditha's Dev Card"/></a>
+<a href="https://app.daily.dev/pramudithan"><img src="https://github.com/PramudithaN/PramudithaN/blob/main/devcard.svg" width="400" alt="Pramuditha's Dev Card"/></a>
 </div>
 
 <h1 align="left">
