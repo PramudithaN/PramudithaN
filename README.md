@@ -1,6 +1,6 @@
 <!--Hi There!!👋😎-->
 <div> 
-<div align="center">
+<!--<div align="center">
 <a href="https://app.daily.dev/pramudithan"><img src="https://github.com/PramudithaN/PramudithaN/blob/main/devcard.svg" width="400" alt="Pramuditha's Dev Card"/></a>
 </div>
 <!--
@@ -10,11 +10,12 @@
 </div>
 -->
 
- <hr/>
- 
+<!-- <hr/>
+ <!--
 <div align="center">
 <img align='justify'  src="https://github-readme-stats.vercel.app/api?username=PramudithaN&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&icon_color=58a6ff&title_color=58a6ff">
 </div>
+-->
 
  <hr/>
 
