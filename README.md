@@ -73,8 +73,8 @@
 <br/>
 <hr/>
 
-<div align="center">
+<div align="justify">
   <a href="https://www.pramuditha.is-a.dev/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/🌐_Portfolio-www.pramuditha.is--a.dev-007ACC?style=for-the-badge" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/🌐_Portfolio-www.pramuditha.is--a.dev-%23FF0000?style=for-the-badge" alt="Portfolio" />
   </a>
 </div>
