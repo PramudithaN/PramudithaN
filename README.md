@@ -12,8 +12,13 @@
 <img align='justify'  src="https://github-readme-stats.vercel.app/api?username=PramudithaN&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&icon_color=58a6ff&title_color=58a6ff">
 </div>
 -->
+<div align="center">
+  <h3>🦉 Night Owl | 💭 Day Dreamer</h3>
+</div>
 
- *Hi there!👋 I'm Pramuditha Nadun, a passionate IT enthusiast deeply immersed in the world of software development. With a solid foundation in React, TypeScript, and JavaScript, I thrive on building dynamic and interactive web applications.*
+<br/>
+
+*Hi there!👋 I'm Pramuditha Nadun, a passionate IT enthusiast deeply immersed in the world of software development. With a solid foundation in React, TypeScript, and JavaScript, I thrive on building dynamic and interactive web applications.*
 
 💡 Always hungry for knowledge, I'm currently broadening my horizons by delving into the realms of Java, Flutter, and Spring Boot. Excited to see where this journey takes me!
 
@@ -65,3 +70,11 @@
 
 </div>
 
+<br/>
+<hr/>
+
+<div align="center">
+  <a href="https://www.pramuditha.is-a.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Portfolio-www.pramuditha.is--a.dev-007ACC?style=for-the-badge" alt="Portfolio" />
+  </a>
+</div>
