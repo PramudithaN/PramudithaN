@@ -12,8 +12,8 @@
 <img align='justify'  src="https://github-readme-stats.vercel.app/api?username=PramudithaN&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&icon_color=58a6ff&title_color=58a6ff">
 </div>
 -->
-<div align="center">
-  <h3>🦉 Night Owl | 💭 Day Dreamer</h3>
+<div align="justify">
+  <h3> Night Owl | Day Dreamer</h3>
 </div>
 
 <br/>
