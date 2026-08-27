@@ -74,7 +74,7 @@
 <hr/>
 
 <div align="center">
-  <a href="https://www.pramuditha.is-a.dev/" target="_blank">
+  <a href="https://www.pramuditha.is-a.dev/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/🌐_Portfolio-www.pramuditha.is--a.dev-007ACC?style=for-the-badge" alt="Portfolio" />
   </a>
 </div>
