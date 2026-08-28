@@ -24,7 +24,7 @@ Curious to see what I've been up to? Check out my completed projects below and f
 
  <hr/>
 
-<div align="justify">
+<div align="left">
    <!-- <div>
     <h5 style={{ color: "#2ecc71" }}>D E S I G N</h5>
 </div>-->
