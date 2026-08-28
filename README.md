@@ -20,11 +20,11 @@
 
 *Hi there!👋 I'm Pramuditha Nadun, a passionate IT enthusiast deeply immersed in the world of software development. With a solid foundation in React, TypeScript, and JavaScript, I thrive on building dynamic and interactive web applications.*
 
-💡 Always hungry for knowledge, I'm currently broadening my horizons by delving into the realms of Java, Flutter, and Spring Boot. Excited to see where this journey takes me!
+Always hungry for knowledge, I'm currently broadening my horizons by delving into the realms of Java, Flutter, and Spring Boot. Excited to see where this journey takes me!
 
-👯 Collaboration fuels my creativity, and I'm always on the lookout for exciting projects to work on. If you have something cool in mind and think I'd be a good fit, let's connect and make magic happen! Particularly interested in projects involving React, TypeScript, and the Java ecosystem.
+Collaboration fuels my creativity, and I'm always on the lookout for exciting projects to work on. If you have something cool in mind and think I'd be a good fit, let's connect and make magic happen! Particularly interested in projects involving React, TypeScript, and the Java ecosystem.
 
-🔍 Curious to see what I've been up to? Check out my completed projects below and feel free to explore them 👇
+Curious to see what I've been up to? Check out my completed projects below and feel free to explore them 👇
 
  <hr/>
 
