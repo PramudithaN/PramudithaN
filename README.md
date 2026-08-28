@@ -78,6 +78,6 @@ Curious to see what I've been up to? Check out my completed projects below and f
     <img src="https://img.shields.io/badge/🌐_Portfolio-www.pramuditha.is--a.dev-%23FF0000?style=for-the-badge" alt="Portfolio" />
   </a>
   <a href="https://www.buymeacoffee.com/PramudithaN" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=PramudithaN&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee" />
+    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
   </a>
 </div>
