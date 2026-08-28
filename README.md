@@ -16,12 +16,8 @@
   <h3> Night Owl | Day Dreamer</h3>
 </div>
 
-<br/>
+**WEBSITES** | Scalable platforms | Graphics | Digital experiences 
 
-*Hi there!👋 I'm Pramuditha Nadun. I design and code, simply*
-
-Websites | Scalable platforms | Graphics | Digital experiences 
-<br/>
 I’m Pramuditha Nadun, a software engineer and designer from Sri Lanka who loves sitting at the intersection of logic and aesthetics. You’ll usually find me deep in GitHub, a design canvas, or an IDE. Whether I'm architecting modern full-stack systems, collaborating with a team, or just tinkering with a random side project to make something... better. Always eager to master new technology and build meaningful digital solutions.
 
 Curious to see what I've been up to? Check out my completed projects below and feel free to explore them 👇
