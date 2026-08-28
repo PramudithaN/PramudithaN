@@ -18,11 +18,10 @@
 
 <br/>
 
-*Hi there!👋 I'm Pramuditha Nadun, a passionate IT enthusiast deeply immersed in the world of software development. With a solid foundation in React, TypeScript, and JavaScript, I thrive on building dynamic and interactive web applications.*
+*Hi there!👋 I'm Pramuditha Nadun, a passionate IT enthusiast deeply immersed in the world of software development. With a solid foundation in modern tech, I thrive on building dynamic and interactive products.*
 
-Always hungry for knowledge, I'm currently broadening my horizons by delving into the realms of Java, Flutter, and Spring Boot. Excited to see where this journey takes me!
-
-Collaboration fuels my creativity, and I'm always on the lookout for exciting projects to work on. If you have something cool in mind and think I'd be a good fit, let's connect and make magic happen! Particularly interested in projects involving React, TypeScript, and the Java ecosystem.
+Websites | Scalable platforms | Graphics | Digital experiences. 
+I’m Pramuditha Nadun, a software engineer and designer from Sri Lanka who loves sitting at the intersection of logic and aesthetics. You’ll usually find me deep in GitHub, a design canvas, or an IDE. Whether I'm architecting modern full-stack systems, collaborating with a team, or just tinkering with a random side project to make something... better. Always eager to master new technology and build meaningful digital solutions.
 
 Curious to see what I've been up to? Check out my completed projects below and feel free to explore them 👇
 
