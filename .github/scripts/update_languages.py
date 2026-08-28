@@ -312,7 +312,7 @@ def main():
     ]
 
     badge_tags = [generate_badge_tag(lang) for lang in significant_langs]
-    badges_html = "\n".join(badge_tags)
+    badges_html = " ".join(badge_tags)
 
     update_readme(badges_html)
 
