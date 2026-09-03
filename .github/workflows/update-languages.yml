@@ -29,6 +29,7 @@ jobs:
       - name: Run language badge updater
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT || secrets.PAT_TOKEN || '' }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: python .github/scripts/update_languages.py
 

@@ -1,12 +1,26 @@
 import os
+import sys
 import re
 import urllib.request
 import json
 import urllib.parse
 
 # Configuration
-USERNAME = os.environ.get("GITHUB_ACTOR") or os.environ.get("GITHUB_REPOSITORY_OWNER") or "PramudithaN"
-TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+owner = os.environ.get("GITHUB_REPOSITORY_OWNER")
+actor = os.environ.get("GITHUB_ACTOR")
+if owner and not owner.endswith("[bot]"):
+    USERNAME = owner
+elif actor and not actor.endswith("[bot]"):
+    USERNAME = actor
+else:
+    USERNAME = "PramudithaN"
+
+TOKEN = (
+    os.environ.get("GH_PAT")
+    or os.environ.get("PAT_TOKEN")
+    or os.environ.get("GITHUB_TOKEN")
+    or os.environ.get("GH_TOKEN")
+)
 README_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "README.md")
 
 # Non-programming languages / build scripts to ignore
@@ -186,6 +200,48 @@ LANGUAGE_BADGES = {
         "color": "%23003B57",
         "logo": "sqlite",
         "logoColor": "white"
+    },
+    "Solidity": {
+        "label": "Solidity",
+        "color": "%23363636",
+        "logo": "solidity",
+        "logoColor": "white"
+    },
+    "Scala": {
+        "label": "Scala",
+        "color": "%23DC322F",
+        "logo": "scala",
+        "logoColor": "white"
+    },
+    "Elixir": {
+        "label": "Elixir",
+        "color": "%234B275F",
+        "logo": "elixir",
+        "logoColor": "white"
+    },
+    "Haskell": {
+        "label": "Haskell",
+        "color": "%235D4F85",
+        "logo": "haskell",
+        "logoColor": "white"
+    },
+    "Zig": {
+        "label": "Zig",
+        "color": "%23F7A41D",
+        "logo": "zig",
+        "logoColor": "white"
+    },
+    "Julia": {
+        "label": "Julia",
+        "color": "%239558B2",
+        "logo": "julia",
+        "logoColor": "white"
+    },
+    "GraphQL": {
+        "label": "GraphQL",
+        "color": "%23E10098",
+        "logo": "graphql",
+        "logoColor": "white"
     }
 }
 
@@ -196,7 +252,7 @@ def make_request(url):
         "Accept": "application/vnd.github.v3+json"
     }
     if TOKEN:
-        headers["Authorization"] = f"token {TOKEN}"
+        headers["Authorization"] = f"Bearer {TOKEN}"
     req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req) as resp:
@@ -207,10 +263,36 @@ def make_request(url):
 
 
 def get_user_languages(username):
-    repos_url = f"https://api.github.com/users/{username}/repos?per_page=100&type=owner"
-    repos = make_request(repos_url)
-    if not repos or not isinstance(repos, list):
-        print(f"Could not fetch repos for {username}")
+    repos = []
+    page = 1
+    # If a custom PAT is supplied, /user/repos returns both public and private repos owned by the user
+    # Otherwise, /users/{username}/repos fetches all public repos
+    has_pat = bool(os.environ.get("GH_PAT") or os.environ.get("PAT_TOKEN"))
+
+    while True:
+        if has_pat:
+            repos_url = f"https://api.github.com/user/repos?per_page=100&page={page}&affiliation=owner"
+        else:
+            repos_url = f"https://api.github.com/users/{username}/repos?per_page=100&page={page}&type=owner"
+
+        page_repos = make_request(repos_url)
+        if page_repos is None:
+            # If error and page 1, we can't continue; if subsequent page, break
+            if page == 1 and not has_pat:
+                print(f"Could not fetch repos for {username}")
+                return None
+            break
+
+        if not isinstance(page_repos, list) or len(page_repos) == 0:
+            break
+
+        repos.extend(page_repos)
+        if len(page_repos) < 100:
+            break
+        page += 1
+
+    if not repos:
+        print(f"No repositories found for {username}")
         return {}
 
     language_totals = {}
@@ -221,7 +303,6 @@ def get_user_languages(username):
         if repo.get("fork"):
             continue
 
-        repo_name = repo.get("name")
         languages_url = repo.get("languages_url")
         if not languages_url:
             continue
@@ -286,8 +367,13 @@ def main():
     print(f"Fetching language stats for {USERNAME}...")
     lang_totals = get_user_languages(USERNAME)
 
+    if lang_totals is None:
+        print("Failed to fetch repository or language data from GitHub API.")
+        # Exit with non-zero code so GitHub Actions workflow alerts on failure
+        sys.exit(1)
+
     if not lang_totals:
-        print("No language data found.")
+        print("No language data found across repositories.")
         return
 
     # Filter out ignored languages (e.g. build scripts, config files)
@@ -296,25 +382,35 @@ def main():
         if lang not in IGNORED_LANGUAGES
     }
 
+    if not filtered_langs:
+        print("No eligible programming languages found after filtering.")
+        return
+
     # Sort languages by byte count descending
     sorted_langs = sorted(filtered_langs.items(), key=lambda x: x[1], reverse=True)
     total_bytes = sum(b for _, b in sorted_langs)
 
-    print("\nDetected Language Breakdown:")
+    print(f"\nDetected Language Breakdown (Total: {total_bytes:,} bytes):")
     for lang, bytes_cnt in sorted_langs:
-        pct = (bytes_cnt / total_bytes) * 100
+        pct = (bytes_cnt / total_bytes) * 100 if total_bytes > 0 else 0
         print(f"- {lang}: {bytes_cnt:,} bytes ({pct:.1f}%)")
 
-    # Filter languages that have meaningful byte counts (> 1KB or > 0.05%)
+    # Include all detected languages that make up at least 0.01% or at least 100 bytes
     significant_langs = [
         lang for lang, bytes_cnt in sorted_langs
-        if (bytes_cnt / total_bytes) >= 0.0005 or bytes_cnt > 1000
+        if (total_bytes > 0 and (bytes_cnt / total_bytes) >= 0.0001) or bytes_cnt >= 100
     ]
+
+    # Fallback to top languages if none met the threshold
+    if not significant_langs:
+        significant_langs = [lang for lang, _ in sorted_langs[:15]]
 
     badge_tags = [generate_badge_tag(lang) for lang in significant_langs]
     badges_html = " ".join(badge_tags)
 
-    update_readme(badges_html)
+    success = update_readme(badges_html)
+    if not success:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
