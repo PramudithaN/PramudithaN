@@ -42,3 +42,9 @@ Curious to see what I've been up to? Check out my completed projects below and f
 <div align="left">
   <a href="https://www.pramuditha.is-a.dev/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🌐_Portfolio-www.pramuditha.is--a.dev-%23FF0000?style=for-the-badge&labelColor=323330" alt="Portfolio" /></a> <a href="https://www.buymeacoffee.com/PramudithaN" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" /></a>
 </div>
+
+<br/>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PramudithaN/PramudithaN/main/tulkun/tulkun.gif" width="640" alt="My GitTulkun swimming" />
+</p>
