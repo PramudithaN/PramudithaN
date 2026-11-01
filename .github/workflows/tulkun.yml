@@ -1,0 +1,32 @@
+name: Draw Profile Tulkun
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Updates every night at midnight UTC
+  workflow_dispatch:     # Allows manual 1-click run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  tulkun:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Generate Tulkun GIF & PNG
+        uses: PramudithaN/git-tulkun@v0.1.0
+        with:
+          login: ${{ github.repository_owner }}
+          view: side        # Options: side | dive | top
+          canon: "false"    # Set to "true" to use canon Avatar colors instead of language colors
+          output-dir: tulkun
+
+      - name: Commit updated Tulkun to profile repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tulkun/tulkun.gif tulkun/tulkun.png tulkun/preview.html
+          git diff --cached --quiet || git commit -m "chore: update Tulkun from latest GitHub activity [skip ci]"
+          git push
